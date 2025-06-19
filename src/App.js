@@ -112,7 +112,7 @@ useEffect(() => {
     updateActiveThreadMessages((msgs) => [...msgs, userMessage, assistantMessage]);
 
     try {
-      const res = await fetch("http://localhost:10000/chat", {
+      const res = await fetch("https://incidents-ai-backend.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userMessage.content }),
